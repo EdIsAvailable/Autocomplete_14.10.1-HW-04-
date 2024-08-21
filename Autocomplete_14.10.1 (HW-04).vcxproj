@@ -127,9 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Dictionary.h" />
+    <ClInclude Include="Input.h" />
     <ClInclude Include="T9.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Dictionary.cpp" />
+    <ClCompile Include="Input.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="T9.cpp" />
   </ItemGroup>
