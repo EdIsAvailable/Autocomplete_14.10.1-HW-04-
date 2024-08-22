@@ -7,16 +7,17 @@ using namespace std;
 #pragma once
 class T9
 {
-private: 
 
+public: 	T9() {
+}
 
+		~T9();
 
-public: 
-		const string getWord(void);
+      const string getWord(void);
 		void Searching();
 		void Sorting();
 		void Show();
-		
+private:
 	
 };
 
