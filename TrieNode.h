@@ -1,26 +1,15 @@
 #pragma once
-#include<iostream>
-#include<string>
-#include<array>
 
 using namespace std;
 
-class TrieNode
-{
+class TrieNode {
+
 public:
-  TrieNode(char letter);
-  ~TrieNode();
-   const int AlfabetSize = 26;
-   bool wordEnd = false;
-   const  string getLetter() const;
-   void AddLetter(char letter, string restWord);
-   bool searchLetter(char letter, string restWord);
-
-private:
-   char _letter;
-   //string _restWord;
-   //string _key;
-   array<TrieNode, 26> childNodes;
-   TrieNode* letters[];
+   //TrieNode* children[26];
+    // Флаг, отмечающий, заканчивается ли слово на этом узле.
+    //bool end_of_word;
+    // Символ, хранящийся в этом узле
+    //char letter;
+   TrieNode(TrieNode* children[26], bool end_of_word, char letter);
+   //~TrieNode();
 };
-
