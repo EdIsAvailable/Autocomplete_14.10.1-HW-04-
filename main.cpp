@@ -7,7 +7,7 @@ int main() {
    // Создаем объект Trie
    Trie T;
 
-   // Вставляем несколько слов в дерево и ищем слово с заданным префиксом
+   // Вставляем несколько слов в дерево (словарик)
    T.Insert("we");
    T.Insert("walk");
    T.Insert("want");
@@ -21,8 +21,9 @@ int main() {
    T.Insert("warp");
    T.Insert("win");
 
-   // Ищем префикс в trie
-   string prefix("wa");
+   cout << "Введите начало слова" << endl;
+   string prefix;
+   cin >> prefix;
 
    TrieNode* current = T.Search(prefix);
 
