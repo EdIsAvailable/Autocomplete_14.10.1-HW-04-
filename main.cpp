@@ -1,12 +1,13 @@
-#include "Trie.h"
+#include "TrieNode.h"
 #include<iostream>
 using namespace std;
 
 int main() {
    setlocale(LC_ALL, "");
+   // Создаем объект Trie
    Trie T;
 
-   // Вставляем слово в строку
+   // Вставляем несколько слов в дерево и ищем слово с заданным префиксом
    T.Insert("we");
    T.Insert("walk");
    T.Insert("want");
@@ -25,10 +26,12 @@ int main() {
 
    TrieNode* current = T.Search(prefix);
 
+   // Префикс не найден
    if (current == NULL or current == &T.root) {
       cout << "Не найдено слов с соответствующим префиксом" << endl;
    }
    else {
+    
       // Префикс был найден в дереве, ищием дочерние элементы
       bool haschildren = false;
       for (int c = 0; c < 26; c++) {
@@ -41,8 +44,8 @@ int main() {
          cout << "Не найдено слов с соответствующим префиксом" << endl;
       }
       else {
-         cout << "Слово, начинающееся на: " << prefix << endl;
-         T.PrintLexical(current, prefix, "");
+         cout << "Слова, начинающееся на: " << prefix << endl;
+         T.ShowLex(current, prefix, "");
       }
    }
    return 0;
